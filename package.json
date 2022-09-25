@@ -23,6 +23,7 @@
 	"type": "module",
 	"dependencies": {
 		"@picocss/pico": "^1.5.5",
+		"hive-auth-wrapper": "^0.8.9",
 		"mdsvex": "^0.10.6",
 		"sass": "^1.55.0",
 		"svelte-preprocess": "^4.10.7"
