@@ -297,6 +297,24 @@
         <p>Nullam dui arcu, malesuada et sodales eu, efficitur vitae dolor. Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas. Nunc placerat facilisis cursus. Sed vestibulum metus eget dolor pharetra rutrum.</p>
         <footer><small>Duis nec elit placerat, suscipit nibh quis, finibus neque.</small></footer>
       </article><!-- ./ Article-->
+      
+      <aside>
+        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="assets/maarten-deckers-T5nXYXCf50I-unsplash-1500x750.jpg" alt="Architecture"></a>
+        <p>
+          <a href="#" onclick="event.preventDefault()">Donec sit amet</a><br>
+          <small>Class aptent taciti sociosqu ad litora torquent per conubia nostra</small>
+        </p>
+        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="assets/daniel-von-appen-tb4heMa-ZRo-unsplash-1500-750.jpg" alt="Architecture"></a>
+        <p>
+          <a href="#" onclick="event.preventDefault()">Suspendisse potenti</a><br>
+          <small>Proin non condimentum tortor. Donec in feugiat sapien.</small>
+        </p>
+        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="assets/matthew-hamilton-Ru3Ap8TNcsk-unsplash-1500-750.jpg" alt="Architecture"></a>
+        <p>
+          <a href="#" onclick="event.preventDefault()">Nullam lobortis placerat aliquam</a><br>
+          <small>Maecenas vitae nibh blandit dolor commodo egestas vel eget neque. Praesent semper justo orci, vel imperdiet mi auctor in.</small>
+        </p>
+      </aside>
 
       <!-- Progress -->
       <section id="progress">
@@ -323,3 +341,4 @@
         </footer>
       </article>
     </dialog><!-- ./ Modal example -->
+
