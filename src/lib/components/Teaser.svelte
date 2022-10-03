@@ -21,6 +21,7 @@
 <style>
   ul {
     display: inline;
+    margin-left: -18px;
   }
   ul li{
     display: inline-flex;
