@@ -4,7 +4,7 @@
 
 <article>
     <hgroup>
-      <h2>{art.title}</h2>
+      <h2><a href={"./blog/" + art.permlink}>{art.title}</a></h2>
       {#if art.json_metadata.description != undefined}
       <h3>{art.json_metadata.description}</h3>
       {:else}
