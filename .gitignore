@@ -6,6 +6,7 @@ node_modules
 .env
 .env.*
 !.env.example
+/.netlify
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,windows,visualstudiocode,node,svelte
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,windows,visualstudiocode,node,svelte
