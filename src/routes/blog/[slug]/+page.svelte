@@ -1,10 +1,8 @@
 <script>
   /** @type {import('./$types').PageData} */
-  import { marked } from 'marked';
+	import MdView from '../../../lib/components/MdView.svelte';
   import Tags from '../../../lib/components/Tags.svelte';
   export let data;
-
-  let body = marked.parse(data.body)
 </script>
 
 <article id="article">
@@ -19,6 +17,6 @@
     </hgroup> 
     <Tags tags={data.json_metadata.tags} />
   </header>
-  {@html body}
+  <MdView markdown={data.body} />
   <footer><small>Duis nec elit placerat, suscipit nibh quis, finibus neque.</small></footer>
  </article>
