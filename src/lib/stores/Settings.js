@@ -1,6 +1,6 @@
 // Site Configuration
-export const hiveId = "verbalshadow";
-export const brand = "small world"
+export const hiveId = "brianoflondon";
+export const brand = "World Peace of Mind"
 export const hideCrossPosts = true;
 export const hideReblogs = false; // TODO: implement
 
