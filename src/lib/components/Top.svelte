@@ -1,4 +1,5 @@
 <script>
+  import { hiveId } from "../stores/Settings";
   export let permlink;
   export let description;
   export let title;
@@ -12,5 +13,10 @@
   {:else}
   <h3> </h3>
   {/if}
-  <h4>By: {author}</h4>
+  <h4>
+  {#if author !== hiveId}
+  Guest Post 
+  {/if}
+  By: {author}</h4>
+  
 </hgroup> 
