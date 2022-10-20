@@ -1,5 +1,5 @@
 /** @type {import('./$types').PageLoad} */
-import { posts, findSinglePost } from '../../../lib/stores/HiveStore'
+import { posts, findSinglePost } from '$lib/stores/HiveStore'
 export const prerender = false;
 
 let workingPosts;
