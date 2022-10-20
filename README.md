@@ -27,8 +27,8 @@ export const hiveAPIs = ["https://api.hive.blog", "https://api.hivekings.com", "
 ```
 
 1. **hiveId** with your hive username.
-2. **brand** with the name you would like to call you blog.
-3. If you want cross-posts in your blog. This is generally a unwanted behavior. Change **hideCrossPosts** to *false*. This will show the orginial post and the small crossposts as seperate posts.
+2. **brand** with the name you would like to call your blog.
+3. If you want cross-posts in your blog. This is generally an unwanted behavior. Change **hideCrossPosts** to *false*. This will show the orginial post and the small crossposts as seperate posts.
 4. **hideReblogs** is not currently implemented. These are currently shown as *Guest Posts* in your blog.
 5. **hiveAPIs** add or remove Hive API endpoints to ensure access.
 
