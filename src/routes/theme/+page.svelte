@@ -1,3 +1,7 @@
+<script>
+  // import modal from "%sveltekit.assets%/js/modal.js"
+</script>
+
 <section id="preview">
         <h2>Preview</h2>
         <p>Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas.</p>
@@ -9,8 +13,8 @@
           </div>
           <fieldset>
             <label for="terms">
-              <input type="checkbox" role="switch" id="terms" name="terms">
-              I agree to the <a href="#" onclick="event.preventDefault()">Privacy Policy</a>
+              <input type="checkbox" aria-checked="false" role="switch" id="terms" name="terms">
+              I agree to the <a href="/#" onclick="event.preventDefault()">Privacy Policy</a>
             </label>
           </fieldset>
         </form>
@@ -41,9 +45,9 @@
         <!-- Inline text elements-->
         <h3>Inline text elements</h3>
         <div class="grid">
-          <p><a href="#" onclick="event.preventDefault()">Primary link</a></p>
-          <p><a href="#" class="secondary" onclick="event.preventDefault()">Secondary link</a></p>
-          <p><a href="#" class="contrast" onclick="event.preventDefault()">Contrast link</a></p>
+          <p><a href="/#" onclick="event.preventDefault()">Primary link</a></p>
+          <p><a href="/#" class="secondary" onclick="event.preventDefault()">Secondary link</a></p>
+          <p><a href="/#" class="contrast" onclick="event.preventDefault()">Contrast link</a></p>
         </div>
         <div class="grid">
           <p><strong>Bold</strong></p>
@@ -196,11 +200,11 @@
             <fieldset>
               <legend><strong>Switches</strong></legend>
               <label for="switch-1">
-                <input type="checkbox" id="switch-1" name="switch-1" role="switch" checked>
+                <input type="checkbox" id="switch-1" name="switch-1" role="switch" checked aria-checked="true">
                 Switch
               </label>
               <label for="switch-2">
-                <input type="checkbox" id="switch-2" name="switch-2" role="switch">
+                <input type="checkbox" id="switch-2" name="switch-2" role="switch" aria-checked="false">
                 Switch
               </label>
             </fieldset>
@@ -299,19 +303,19 @@
       </article><!-- ./ Article-->
       
       <aside>
-        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
+        <a href="/#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
         <p>
-          <a href="#" onclick="event.preventDefault()">Donec sit amet</a><br>
+          <a href="/#" onclick="event.preventDefault()">Donec sit amet</a><br>
           <small>Class aptent taciti sociosqu ad litora torquent per conubia nostra</small>
         </p>
-        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
+        <a href="/#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
         <p>
-          <a href="#" onclick="event.preventDefault()">Suspendisse potenti</a><br>
+          <a href="/#" onclick="event.preventDefault()">Suspendisse potenti</a><br>
           <small>Proin non condimentum tortor. Donec in feugiat sapien.</small>
         </p>
-        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
+        <a href="/#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
         <p>
-          <a href="#" onclick="event.preventDefault()">Nullam lobortis placerat aliquam</a><br>
+          <a href="/#" onclick="event.preventDefault()">Nullam lobortis placerat aliquam</a><br>
           <small>Maecenas vitae nibh blandit dolor commodo egestas vel eget neque. Praesent semper justo orci, vel imperdiet mi auctor in.</small>
         </p>
       </aside>
