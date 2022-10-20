@@ -299,17 +299,17 @@
       </article><!-- ./ Article-->
       
       <aside>
-        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="assets/maarten-deckers-T5nXYXCf50I-unsplash-1500x750.jpg" alt="Architecture"></a>
+        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
         <p>
           <a href="#" onclick="event.preventDefault()">Donec sit amet</a><br>
           <small>Class aptent taciti sociosqu ad litora torquent per conubia nostra</small>
         </p>
-        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="assets/daniel-von-appen-tb4heMa-ZRo-unsplash-1500-750.jpg" alt="Architecture"></a>
+        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
         <p>
           <a href="#" onclick="event.preventDefault()">Suspendisse potenti</a><br>
           <small>Proin non condimentum tortor. Donec in feugiat sapien.</small>
         </p>
-        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="assets/matthew-hamilton-Ru3Ap8TNcsk-unsplash-1500-750.jpg" alt="Architecture"></a>
+        <a href="#" aria-label="Example" onclick="event.preventDefault()"><img src="https://images.unsplash.com/photo-1666023903340-0eb57af0c1a4?ixlib=rb-4.0.3&dl=razvan-dumitrasconiu-h8zhcGLHmuY-unsplash.jpg&w=640&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Architecture"></a>
         <p>
           <a href="#" onclick="event.preventDefault()">Nullam lobortis placerat aliquam</a><br>
           <small>Maecenas vitae nibh blandit dolor commodo egestas vel eget neque. Praesent semper justo orci, vel imperdiet mi auctor in.</small>
