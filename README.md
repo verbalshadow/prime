@@ -8,10 +8,12 @@ A Quasi-Static blog for the [Hive Blockchain](https://hive.io).
 
 ### Install dependencies
 
+> cd prime
+
 > npm install
 
 ### Replacing the following.
-In /src/lib/stores/Settings.js.
+In *src/lib/stores/Settings.js*.
 
 ```js
 // Site Configuration
@@ -32,7 +34,7 @@ export const hiveAPIs = ["https://api.hive.blog", "https://api.hivekings.com", "
 
 ### Update main page
 
-In src/routes/+page.svelte
+In *src/routes/+page.svelte*.
 
 
 ### Build your site
