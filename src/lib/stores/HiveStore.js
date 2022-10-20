@@ -5,6 +5,10 @@ import { Client } from "@hiveio/dhive";
 export const posts = writable([]);
 // export const tags = writable(new Set());
 
+let postsCache;
+posts.subscribe( value => {
+  postsCache = value;
+})
 const client = new Client(hiveAPIs);
 
 var query = {
@@ -24,3 +28,7 @@ client.database.getDiscussions('blog', query)
     }, [])
   ]);
 })
+
+export async function getSinglePost(slug){
+  return await postsCache.find(element => element.permlink === slug);
+}
