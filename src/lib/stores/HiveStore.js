@@ -29,6 +29,16 @@ client.database.getDiscussions('blog', query)
   ]);
 })
 
-export async function findSinglePost(slug){
-  return await postsCache.find(element => element.permlink === slug);
+export async function findSinglePost(permlink){
+  let post;
+  try {
+    post = await postsCache.find(element => element.permlink === permlink);
+  } catch (error) {
+    post = await getSinglePost(permlink);
+  }
+  return post ;
+}
+
+async function getSinglePost(permlink){
+  return await client.database.call('get_content', [hiveId, permlink])
 }
