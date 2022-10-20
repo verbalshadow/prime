@@ -17,17 +17,7 @@ var query = {
 };
 
 client.database.getDiscussions('blog', query)
-.then((results) =>{
-  posts.update(value => [...value, ...results
-    .reduce((hold, current) =>{
-      let post = current;
-      post.json_metadata = JSON.parse(current.json_metadata);
-      if (post.json_metadata.tags.includes("cross-post") && hideCrossPosts) return hold;
-      hold.push(post);
-      return hold;
-    }, [])
-  ]);
-})
+  .then((results) => addPosts(results))
 
 export async function findSinglePost(permlink){
   let post;
@@ -41,4 +31,17 @@ export async function findSinglePost(permlink){
 
 async function getSinglePost(permlink){
   return await client.database.call('get_content', [hiveId, permlink])
+  .then((results) => addPosts(results));
+}
+
+function addPosts(items){
+  posts.update(value => [...value, ...items
+    .reduce((hold, current) =>{
+      let post = current;
+      post.json_metadata = JSON.parse(current.json_metadata);
+      if (post.json_metadata.tags.includes("cross-post") && hideCrossPosts) return hold;
+      hold.push(post);
+      return hold;
+    }, [])
+  ]);
 }
