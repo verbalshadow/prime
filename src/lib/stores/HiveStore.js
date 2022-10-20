@@ -29,6 +29,6 @@ client.database.getDiscussions('blog', query)
   ]);
 })
 
-export async function getSinglePost(slug){
+export async function findSinglePost(slug){
   return await postsCache.find(element => element.permlink === slug);
 }
