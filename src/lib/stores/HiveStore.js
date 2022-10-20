@@ -1,8 +1,9 @@
+import { persist, createIndexedDBStorage } from '@macfja/svelte-persistent-store';
 import { writable } from 'svelte/store'
 import { hiveId, hiveAPIs, hideCrossPosts } from './Settings';
 import { Client } from "@hiveio/dhive";
 
-export const posts = writable([]);
+export const posts = persist(writable([]), createIndexedDBStorage(), "posts");
 // export const tags = writable(new Set());
 
 let postsCache;
