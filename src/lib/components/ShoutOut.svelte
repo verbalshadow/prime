@@ -7,7 +7,7 @@
   export let url = "https://hive.io";
 </script>
 
-<article class="shoutout">
+<article>
   <header>
     <h2><a href={url} target="_blank">{name}</a></h2>
   </header>
@@ -19,12 +19,11 @@
 
 <style>
 .thumb {
-  max-width: 200px;
-  max-height: 200px;
-  display: inline;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
-.shoutout {
+/* .shoutout {
   max-width: 350px;
   max-height: 450px;
-}
+} */
 </style>
