@@ -1,7 +1,7 @@
 <script>
   /** @type {import('./$types').Pagepost} */
   export let name = "Hive";
-  export let description = "Fast Feeless Blockchain Network.";
+  export let description = "Fast Feeless Blockchain Network like you never seen before.";
   export let image = "https://cryptologos.cc/logos/hive-blockchain-hive-logo.png?v=023";
   export let alttag = "Hive Logo";
   export let url = "https://hive.io";
