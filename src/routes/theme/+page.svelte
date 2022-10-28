@@ -1,7 +1,9 @@
 <script>
   // import modal from "%sveltekit.assets%/js/modal.js"
 </script>
-
+<svelte:head>
+  <script src="/js/modal.js"></script>
+</svelte:head>
 <section id="preview">
         <h2>Preview</h2>
         <p>Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas.</p>
