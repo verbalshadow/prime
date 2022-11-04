@@ -1,6 +1,5 @@
 /** @type {import('./$types').PageLoad} */
 import { posts, findSinglePost, findPostComments } from '$lib/stores/HiveStore'
-import { hiveId } from '$lib/stores/Settings';
 export const prerender = false;
 
 let workingPosts;
