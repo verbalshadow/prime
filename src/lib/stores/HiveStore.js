@@ -10,10 +10,10 @@ export const postComments = persist(writable({}), createIndexedDBStorage(), "pos
 let postsCache;
 let commentCache;
 
-postComments.subscribe( value => {
+postComments.subscribe(value => {
   commentCache = value
 })
-posts.subscribe( value => {
+posts.subscribe(value => {
   postsCache = value;
 })
 
@@ -27,24 +27,25 @@ var query = {
 client.database.getDiscussions('blog', query)
   .then((results) => addPosts(results))
 
-export async function findSinglePost(permlink){
-  let post;
+export async function findSinglePost(permlink) {
+  let post = await postsCache.find(element => element.permlink === permlink);
   try {
-    post = await postsCache.find(element => element.permlink === permlink);
+    if (post === undefined) throw "post not found";
   } catch (error) {
+    console.log(error);
     post = await getSinglePost(permlink);
   }
-  return post ;
+  return post;
 }
 
-async function getSinglePost(permlink){
+async function getSinglePost(permlink) {
   return await client.database.call('get_content', [hiveId, permlink])
-  .then((results) => addPosts(results));
+    .then((results) => addPosts(results));
 }
 
-function addPosts(items){
+function addPosts(items) {
   posts.update(value => [...value, ...items
-    .reduce((hold, current) =>{
+    .reduce((hold, current) => {
       let post = current;
       post.json_metadata = JSON.parse(current.json_metadata);
       if (post.json_metadata.tags.includes("cross-post") && hideCrossPosts) return hold;
@@ -54,22 +55,23 @@ function addPosts(items){
   ]);
 }
 
-export async function findPostComments(author, permlink){
-  let comments;
-  if (commentCache.hasOwnProperty(permlink)) {
-    comments = commentCache[permlink]
-  } else {
+export async function findPostComments(author, permlink) {
+  let comments = commentCache[permlink]
+  try {
+    if (!comments) throw "comments not found";
+  } catch (error) {
+    console.log(error);
     comments = await getPostComments(author, permlink);
   }
-  return comments ;
+  return comments;
 }
 
-async function getPostComments(author, permlink){
+async function getPostComments(author, permlink) {
   let cmnts = await client.database.call('get_content_replies', [author, permlink])
-  .then((results) => addPostComments(results, permlink));
+    .then((results) => addPostComments(results, permlink));
   return cmnts;
 }
 
-function addPostComments(items, permlink){
-  postComments.update(current => Object.assign({}, current, {[permlink]: items}))
+function addPostComments(items, permlink) {
+  postComments.update(current => Object.assign({}, current, { [permlink]: items }))
 }
