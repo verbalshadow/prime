@@ -29,13 +29,12 @@ client.database.getDiscussions('blog', query)
 
 export async function findSinglePost(permlink) {
   let post = await postsCache.find(element => element.permlink === permlink);
-  try {
-    if (post === undefined) throw "post not found";
-  } catch (error) {
-    console.log(error);
-    post = await getSinglePost(permlink);
-  }
-  return post;
+  if (post) {
+    return post
+  } else {
+    await getSinglePost(permlink);
+    return await postsCache.find(element => element.permlink === permlink);
+  };
 }
 
 async function getSinglePost(permlink) {
@@ -57,13 +56,12 @@ function addPosts(items) {
 
 export async function findPostComments(author, permlink) {
   let comments = commentCache[permlink]
-  try {
-    if (!comments) throw "comments not found";
-  } catch (error) {
-    console.log(error);
-    comments = await getPostComments(author, permlink);
+  if (comments) {
+    return comments
+  } else {
+    await getPostComments(author, permlink);
+    return commentCache[permlink];
   }
-  return comments;
 }
 
 async function getPostComments(author, permlink) {
