@@ -1,7 +1,12 @@
 <script>
     /** @type {import('./$types').PageData} */
 	import ShoutOut from '../lib/components/ShoutOut.svelte';
+	import { brand } from '../lib/stores/Settings';
 </script>
+
+<svelte:head>
+    <title>{brand}</title>
+</svelte:head>
 
 <hgroup>
 <h1>Welcome to <strong>Prime</strong></h1> 
