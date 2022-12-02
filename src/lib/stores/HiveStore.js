@@ -39,7 +39,7 @@ export async function findSinglePost(permlink) {
 
 async function getSinglePost(permlink) {
   return await client.database.call('get_content', [hiveId, permlink])
-    .then((results) => addPosts(results));
+    .then((results) => addPosts([results]));
 }
 
 function addPosts(items) {
