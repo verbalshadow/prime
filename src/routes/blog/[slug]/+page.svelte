@@ -9,7 +9,13 @@
   export let data;
 </script>
 
-{#if data}
+{#await data}
+<section id="loading">
+  <h2>Loading</h2>
+  <article aria-busy="true"></article>
+  <button aria-busy="true">Please wait…</button>
+</section>
+{:then data} 
 <article id="article">
   <header>
     <Top title={data.post.title} description={data.post.json_metadata.description} author={data.post.author} permlink={data.post.permlink} />
@@ -21,9 +27,6 @@
   {#if data.comments}
     <Comments comments={data.comments} />
   {/if}
-{:else}
-<section id="loading">
-  <h2>Loading</h2>
-  <article aria-busy="true"></article>
-</section>
-{/if}
+{:catch error}
+<p style="color: red">{error.message}</p>
+{/await}
