@@ -4,6 +4,10 @@
     import Teaser from '$lib/components/Teaser.svelte';
 </script>
 
+<svelte:head>
+  <title>Blog Posts</title>
+</svelte:head>
+
 <h1>Recent Posts</h1>
 {#each $posts as art}
     <Teaser art={art}/>

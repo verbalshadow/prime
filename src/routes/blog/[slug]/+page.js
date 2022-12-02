@@ -1,11 +1,6 @@
 /** @type {import('./$types').PageLoad} */
-import { posts, findSinglePost, findPostComments } from '$lib/stores/HiveStore'
+import {findSinglePost, findPostComments } from '$lib/stores/HiveStore'
 export const prerender = false;
-
-let workingPosts;
-posts.subscribe( value => {
-  workingPosts = value;
-})
 
 export async function load({ params }){
   let rtn = {};

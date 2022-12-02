@@ -9,6 +9,10 @@
   export let data;
 </script>
 
+<svelte:head>
+  <title>{data.post.title}</title>
+</svelte:head>
+
 {#await data}
 <section id="loading">
   <h2>Loading</h2>
