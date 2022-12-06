@@ -2,6 +2,7 @@
     /** @type {import('./$types').PageData} */
 	import ShoutOut from '$lib/components/ShoutOut.svelte';
 	import { brand } from '$lib/stores/Settings';
+	import Loading from '../lib/components/Loading.svelte';
 </script>
 
 <svelte:head>

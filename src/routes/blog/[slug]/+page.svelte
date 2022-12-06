@@ -4,6 +4,7 @@
   import Tags from '$lib/components/Tags.svelte';
 	import Top from '$lib/components/Top.svelte';
   import Comments from '$lib/components/Comments.svelte';
+	import Loading from '$lib/components/Loading.svelte';
 	// import Voting from '$lib/components/Voting.svelte';
 
   export let data;
@@ -14,11 +15,7 @@
 </svelte:head>
 
 {#await data}
-<section id="loading">
-  <h2>Loading</h2>
-  <article aria-busy="true"></article>
-  <button aria-busy="true">Please wait…</button>
-</section>
+<Loading />
 {:then data} 
 <article id="article">
   <header>
