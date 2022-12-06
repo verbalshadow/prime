@@ -17,7 +17,7 @@ posts.subscribe(value => {
   postsCache = value;
 })
 
-const client = new Client(hiveAPIs);
+export const client = new Client(hiveAPIs);
 
 var query = {
   tag: hiveId, // This tag is used to filter the results by a specific post tag

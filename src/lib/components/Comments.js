@@ -1,4 +1,4 @@
-import {postComments, commentCache } from "../stores/HiveStore";
+import {postComments, commentCache, client } from "../stores/HiveStore";
 
 export async function findPostComments(author, permlink) {
   if (!commentCache[permlink]) {
