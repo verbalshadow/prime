@@ -29,12 +29,10 @@ client.database.getDiscussions('blog', query)
 
 export async function findSinglePost(permlink) {
   let post = await postsCache.find(element => element.permlink === permlink);
-  if (post) {
-    return post
-  } else {
+  if (!post) {
     await getSinglePost(permlink);
-    return await postsCache.find(element => element.permlink === permlink);
   };
+  return await postsCache.find(element => element.permlink === permlink);
 }
 
 async function getSinglePost(permlink) {
@@ -56,12 +54,10 @@ function addPosts(items) {
 
 export async function findPostComments(author, permlink) {
   let comments = commentCache[permlink]
-  if (comments) {
-    return comments
-  } else {
+  if (!comments) {
     await getPostComments(author, permlink);
-    return commentCache[permlink];
   }
+  return await commentCache[permlink];
 }
 
 async function getPostComments(author, permlink) {
