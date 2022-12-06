@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-  <title>{data.post.title}</title>
+  <title>{data.title}</title>
 </svelte:head>
 
 {#await data}
@@ -19,15 +19,13 @@
 {:then data} 
 <article id="article">
   <header>
-    <Top title={data.post.title} description={data.post.json_metadata.description} author={data.post.author} permlink={data.post.permlink} />
-    <Tags tags={data.post.json_metadata.tags} />
+    <Top title={data.title} description={data.json_metadata.description} author={data.author} permlink={data.permlink} />
+    <Tags tags={data.json_metadata.tags} />
   </header>
-  <MdView markdown={data.post.body} />
+  <MdView markdown={data.body} />
   <footer><small>rawr</small></footer>
- </article>
-  {#if data.comments}
-    <Comments comments={data.comments} />
-  {/if}
+</article>
+<Comments author={data.author} permlink={data.permlink}/>
 {:catch error}
 <p style="color: red">{error.message}</p>
 {/await}

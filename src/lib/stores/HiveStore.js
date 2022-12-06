@@ -7,8 +7,8 @@ export const posts = persist(writable([]), createIndexedDBStorage(), "posts");
 export const postComments = persist(writable({}), createIndexedDBStorage(), "postcomments");
 // export const tags = writable(new Set());
 
-let postsCache;
-let commentCache;
+export let postsCache;
+export let commentCache;
 
 postComments.subscribe(value => {
   commentCache = value
@@ -50,22 +50,4 @@ function addPosts(items) {
       return hold;
     }, [])
   ]);
-}
-
-export async function findPostComments(author, permlink) {
-  let comments = commentCache[permlink]
-  if (!comments) {
-    await getPostComments(author, permlink);
-  }
-  return await commentCache[permlink];
-}
-
-async function getPostComments(author, permlink) {
-  let cmnts = await client.database.call('get_content_replies', [author, permlink])
-    .then((results) => addPostComments(results, permlink));
-  return cmnts;
-}
-
-function addPostComments(items, permlink) {
-  postComments.update(current => Object.assign({}, current, { [permlink]: items }))
 }
