@@ -1,5 +1,5 @@
 /** @type {import('./$types').LayoutLoad} */
 export async function load() {
-    return {};
+	return {};
 }
-export const prerender = true
+export const prerender = true;

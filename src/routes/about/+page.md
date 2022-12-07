@@ -1,4 +1,5 @@
 <svelte:head>
+
   <title>About</title>
 </svelte:head>
 
@@ -6,4 +7,4 @@
 
 Hello,
 
-I'm a often confused about the world. 
+I'm a often confused about the world.
